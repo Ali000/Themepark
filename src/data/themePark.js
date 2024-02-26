@@ -1,11 +1,10 @@
 let parks = [
     {
-        name: "Adhari",
+        id: 1,
+        name: "Athari",
         Location: "Bahrain",
-        Timings: {
-            weekdays: "4PM - 12AM",
-            weekends: "4PM - 12AM"
-        },
+        image: "https://i.imgur.com/wW9Unj4.jpg",
+        description: "Adhari Park is a popular amusement park located in the Kingdom of Bahrain, specifically in the city of Manama. It is one of the largest amusement parks in the country and offers a wide range of entertainment options for visitors of all ages.",
         rides: [
             {
                 name: "Trampoline Park",
@@ -31,12 +30,11 @@ let parks = [
         ]
     },
     {
+        id: 2,
         name: "The Lost Paradise Of Dilmun",
         Location: "Bahrain",
-        Timings: {
-            weekdays: "8AM - 12AM",
-            weekends: "8AM - 12AM"
-        },
+        image: "https://i.imgur.com/PLcgd9Q.jpg",
+        description: "The Lost Paradise of Dilmun Water Park is a prominent attraction located in the Kingdom of Bahrain. The park offers a diverse range of water attractions suitable for visitors of all ages. ",
         rides: [
            {
                 name: "Super Bowl",
@@ -56,12 +54,11 @@ let parks = [
         ]
     },
     {
+        id: 3,
         name: "Disneyland Park",
         Location: "United States",
-        Timings: {
-            weekdays: "8AM - 12AM",
-            weekends: "8AM - 12AM"
-        },
+        image: "https://i.imgur.com/SzuCW3X.jpg",
+        description: "Disneyland Park is a world-renowned theme park located in Anaheim, California, USA. The park covers approximately 85 acres and is divided into several themed lands, each offering its unique attractions, entertainment, and dining options.",
         rides: [
             {
                 name: "Golden Zephyr",
