@@ -189,15 +189,15 @@ input:hover {
 .inputsDiv {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center horizontally */
-  justify-content: center; /* Center vertically */
-  height: auto; /* Set height to auto */
+  align-items: center;
+  justify-content: center;
+  height: auto;
 }
 
 .input-container {
   position: relative;
   margin: 35px;
-  width: 300px; /* Set a fixed width for the input container */
+  width: 300px;
 }
 
 /* Input field */
@@ -245,16 +245,10 @@ input:hover {
   width: 100%;
 }
 
-
-
-
-
-
-
 .input-containerDec {
   position: relative;
   margin: 35px;
-  width: 300px; /* Set a fixed width for the input container */
+  width: 300px;
 }
 
 /* Input field */
@@ -303,16 +297,11 @@ textarea.input-fieldDec:focus + .input-labelDec {
   width: 100%;
 }
 
-
-
-
-
-
 /* ButtonThree */
 .buttonThree {
-  width: 90px; 
+  width: 90px;
   height: 40px;
-  margin-top: 20px; 
+  margin-top: 20px;
   background-color: #007acc;
   outline: 3px #007acc solid;
   outline-offset: -3px;
@@ -337,8 +326,12 @@ textarea.input-fieldDec:focus + .input-labelDec {
 .buttonThree:hover .textThree {
   color: #007acc;
 }
-.ButtonSubmitDiv{
+.ButtonSubmitDiv {
   justify-content: center;
   align-items: center;
   display: flex;
+}
+.link-button {
+  text-decoration: none;
+  color: inherit;
 }

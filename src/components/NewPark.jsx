@@ -83,9 +83,9 @@ const NewPark = () => {
         </div>
       </div>
       <div className="ButtonSubmitDiv">
-      <button className="buttonThree" onClick={handleSubmit}>
-        <p className="textThree">Submit</p>
-      </button>
+        <button className="buttonThree" onClick={handleSubmit}>
+          <p className="textThree">Submit</p>
+        </button>
       </div>
     </div>
   )
