@@ -8,10 +8,10 @@ const Home = () => {
     return (
         <div>
             <Nav />
+            <div className="wrapper">
             {
                 parks.map((park) => {
                     return (
-                        <div className="wrapper">
                         <div key={park.id} className="themepark-card">
                             <div  className="themepark-details">
                                 <div className="themepark-image">
@@ -26,10 +26,10 @@ const Home = () => {
                                 <Link to={"/themepark/" + park.id}><button>View More</button></Link>
                             </div>
                         </div>
-                        </div>
                     )
                 })
             }
+            </div>
         </div>
     )
 }
