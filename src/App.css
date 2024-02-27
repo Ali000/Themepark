@@ -72,3 +72,7 @@ body {
   display: flex;
   justify-content: flex-end;
 }
+.themepark-delete{
+  display: flex;
+  justify-content: flex-start;
+}
