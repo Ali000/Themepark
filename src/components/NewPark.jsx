@@ -1,5 +1,7 @@
 import Nav from "./Nav"
 import { useRef } from "react"
+import axios from "axios";
+
 const NewPark = () => {
 
     const nameRef = useRef(null);
@@ -7,7 +9,8 @@ const NewPark = () => {
     const imageRef = useRef(null);
     const descriptionRef = useRef(null);
 
-    const handleSubmit = (e) => {
+
+    const handleSubmit = async (e) => {
         e.preventDefault()
 
         let formFields = {
@@ -16,8 +19,10 @@ const NewPark = () => {
             image: imageRef.current.value,
             description: descriptionRef.current.value
         }
-
         console.log(formFields);
+
+        let response = await axios.post("http://localhost:3000/themeParks", formFields);
+        console.log(response);
 
     }
 

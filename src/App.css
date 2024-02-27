@@ -40,6 +40,7 @@ body {
 .wrapper {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .themepark-card {
@@ -49,7 +50,6 @@ body {
   padding: 10px;
   width: 60%;
 }
-
 
 .themepark-details {
   display: flex;
