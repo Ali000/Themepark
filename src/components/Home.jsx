@@ -1,5 +1,6 @@
 import parks from "../data/themePark"
 import Nav from "./Nav"
+import { Link } from "react-router-dom"
 
 const Home = () => {
     console.log(parks)
@@ -21,7 +22,7 @@ const Home = () => {
                                 </div>
                             </div>
                             <div className="themepark-view-more">
-                                <button>View More</button>
+                                <Link to={"/themepark/" + park.id}><button>View More</button></Link>
                             </div>
                         </div>
                     )
@@ -29,7 +30,6 @@ const Home = () => {
             }
         </div>
     )
-
 }
 
 export default Home
