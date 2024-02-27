@@ -12,10 +12,13 @@ const ThemePark = () => {
     const {id} = location.state;
 
     const getAllRides = async () => {
-
+        let mongoId;
         let response = await axios.get("http://localhost:3000/rides");
-        console.log(response.data);
-
+        let ridesPerPark = response.data.filter((ride)=> {
+            mongoId = ride.themeParkId;
+            return mongoId === id;
+        })
+        setRides(ridesPerPark);
     }
 
     useEffect(() => {
@@ -25,7 +28,27 @@ const ThemePark = () => {
     return (
         <div>
             <Nav />
-            ThemePark details
+            {
+                rides.map((ride) => {
+                    return (
+                        <div key={ride._id} className="wrapper-ride">
+                            <div  className="ride-card">
+                                <div>
+                                    <img src={ride.image} alt={ride.name} />
+                                </div>
+                                <div>
+                                <h3>{ride.name}</h3>
+                                </div>
+                                <div>
+                                <h3>{ride.ageLimit}</h3>
+                                </div>
+                                <h3>{ride.thrill}</h3>
+                                <p>{ride.description}</p>
+                            </div>
+                        </div>
+                    )
+                })
+            }
             <NewRide id={id}/>
         </div>
     )
