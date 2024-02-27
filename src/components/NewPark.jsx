@@ -19,11 +19,9 @@ const NewPark = () => {
             image: imageRef.current.value,
             description: descriptionRef.current.value
         }
-        console.log(formFields);
 
         let response = await axios.post("http://localhost:3000/themeParks", formFields);
-        console.log(response);
-
+        e.target.reset();
     }
 
     return (
