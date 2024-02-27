@@ -24,7 +24,7 @@ body {
 .nav-bar {
   display: flex;
   justify-content: space-around;
-  background-color: #05386B;
+  background-color: #05386b;
   color: white;
   padding: 5px;
 }
@@ -65,29 +65,28 @@ body {
 }
 .themepark-image {
   margin-right: 20px;
-  
 }
 
-.themepark-view-more{
+.themepark-view-more {
   display: flex;
   justify-content: flex-end;
 }
 
-.themepark-delete{
+.themepark-delete {
   display: flex;
   justify-content: flex-start;
 }
-.searchDiv{
+.searchDiv {
   display: flex;
   justify-content: flex-start;
-  margin-top:30px ;
-  margin-left:30px ;
+  margin-top: 30px;
+  margin-left: 30px;
 }
 .input {
   max-width: 190px;
   background-color: #f5f5f5;
   color: #242424;
-  padding: .15rem .5rem;
+  padding: 0.15rem 0.5rem;
   min-height: 40px;
   border-radius: 4px;
   outline: none;
@@ -120,4 +119,226 @@ input:hover {
   height: 300px;
   margin: 10px;
   border-radius: 10px;
+}
+.buttonOne {
+  width: 100px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  gap: 15px;
+  background-color: #007acc;
+  outline: 3px #007acc solid;
+  outline-offset: -3px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 400ms;
+  color: beige;
+}
+
+.buttonOne.textOne {
+  color: white;
+  font-weight: 700;
+  font-size: 1em;
+  transition: 400ms;
+}
+
+.buttonOne:hover {
+  background-color: transparent;
+}
+
+.buttonOne:hover .textOne {
+  color: #007acc;
+}
+.buttonTwo {
+  width: 50px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  gap: 15px;
+  background-color: #d35f5f;
+  outline: 3px #d35f5f solid;
+  outline-offset: -3px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 400ms;
+  color: beige;
+}
+
+.buttonTwo.textTwo {
+  color: white;
+  font-weight: 700;
+  font-size: 1em;
+  transition: 400ms;
+}
+
+.buttonTwo:hover {
+  background-color: transparent;
+  color: #d35f5f;
+}
+
+.buttonTwo:hover .textOne {
+  color: #d35f5f;
+}
+/* Input container */
+.inputsDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  height: auto; /* Set height to auto */
+}
+
+.input-container {
+  position: relative;
+  margin: 35px;
+  width: 300px; /* Set a fixed width for the input container */
+}
+
+/* Input field */
+.input-field {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  background-color: transparent;
+}
+
+/* Input label */
+.input-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  color: rgba(204, 204, 204, 0);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Input highlight */
+.input-highlight {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #007bff;
+  transition: all 0.3s ease;
+}
+
+/* Input field:focus styles */
+.input-field:focus + .input-label {
+  top: -20px;
+  font-size: 12px;
+  color: #007bff;
+}
+
+.input-field:focus + .input-label + .input-highlight {
+  width: 100%;
+}
+
+
+
+
+
+
+
+.input-containerDec {
+  position: relative;
+  margin: 35px;
+  width: 300px; /* Set a fixed width for the input container */
+}
+
+/* Input field */
+.input-fieldDec {
+  display: block;
+  height: 70px;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  background-color: transparent;
+}
+
+/* Input label */
+.input-labelDec {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  color: rgba(204, 204, 204, 0);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Input highlight */
+.input-highlightDec {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #007bff;
+  transition: all 0.3s ease;
+}
+
+/* Input field:focus styles */
+textarea.input-fieldDec:focus + .input-labelDec {
+  top: -20px;
+  font-size: 12px;
+  color: #007bff;
+}
+
+.input-fieldDec:focus + .input-labelDec + .input-highlightDec {
+  width: 100%;
+}
+
+
+
+
+
+
+/* ButtonThree */
+.buttonThree {
+  width: 90px; 
+  height: 40px;
+  margin-top: 20px; 
+  background-color: #007acc;
+  outline: 3px #007acc solid;
+  outline-offset: -3px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 400ms;
+  color: beige;
+}
+
+.buttonThree.textThree {
+  color: white;
+  font-weight: 700;
+  font-size: 1em;
+  transition: 400ms;
+}
+
+.buttonThree:hover {
+  background-color: transparent;
+}
+
+.buttonThree:hover .textThree {
+  color: #007acc;
+}
+.ButtonSubmitDiv{
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }

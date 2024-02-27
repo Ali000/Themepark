@@ -1,29 +1,29 @@
-import { useEffect, useState } from "react";
-import Nav from "./Nav";
-import { Link } from "react-router-dom";
-import axios from "axios";
+import { useEffect, useState } from "react"
+import Nav from "./Nav"
+import { Link } from "react-router-dom"
+import axios from "axios"
 
 const Home = () => {
-  const [parks, setParks] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
+  const [parks, setParks] = useState([])
+  const [searchTerm, setSearchTerm] = useState("")
 
   const getParks = async () => {
-    let response = await axios.get("http://localhost:3000/themeParks");
-    setParks(response.data);
-  };
+    let response = await axios.get("http://localhost:3000/themeParks")
+    setParks(response.data)
+  }
 
   const deleteThemePark = async (id) => {
-    await axios.delete(`http://localhost:3000/themeParks/${id}`);
-    getParks();
-  };
+    await axios.delete(`http://localhost:3000/themeParks/${id}`)
+    getParks()
+  }
 
   useEffect(() => {
-    getParks();
-  }, []);
+    getParks()
+  }, [])
 
   const handleSearch = (event) => {
-    setSearchTerm(event.target.value.toLowerCase().trim());
-  };
+    setSearchTerm(event.target.value.toLowerCase().trim())
+  }
 
   return (
     <div>
@@ -58,21 +58,24 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="themepark-delete">
-                  <button onClick={() => deleteThemePark(park._id)}>
-                    Delete
-                  </button>
+                <button class="buttonTwo" onClick={() => deleteThemePark(park._id)}>
+                      <p class="textTwo">Delete</p>
+                    </button>
+                
                 </div>
                 <div className="themepark-view-more">
                   <Link to={"/themepark/" + park._id} state={{ id: park._id }}>
-                    <button>View More</button>
+                    <button class="buttonOne">
+                      <p class="textOne">View More</p>
+                    </button>
                   </Link>
                 </div>
               </div>
-            );
+            )
           })}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
