@@ -72,3 +72,21 @@ body {
   display: flex;
   justify-content: flex-end;
 }
+
+.wrapper-ride {
+  display: flex;
+  justify-content: center;
+}
+
+.ride-card {
+  display: flex;
+  margin: 30px;
+  width: 60%;
+}
+
+.ride-card img {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  border-radius: 10px;
+}
