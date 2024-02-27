@@ -1,6 +1,7 @@
 import { useRef } from 'react'
+import axios from 'axios';
 
-const NewRide = () => {
+const NewRide = (props) => {
 
   const nameRef = useRef(null);
   const imageRef = useRef(null);
@@ -8,7 +9,8 @@ const NewRide = () => {
   const descriptionRef = useRef(null);
   const ageRef = useRef(null);
 
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     let formFields = {
@@ -16,9 +18,14 @@ const NewRide = () => {
       image: imageRef.current.value,
       thrill: thrillRef.current.value,
       ageLimit: ageRef.current.value,
-      description: descriptionRef.current.value
+      description: descriptionRef.current.value,
+      themeParkId: props.id
     }
-    console.log(formFields)
+
+    let response = await axios.post("http://localhost:3000/rides", formFields);
+
+    e.target.reset();
+
   }
 
   return (
