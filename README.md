@@ -11,7 +11,7 @@ Theme Parks is a website where the user can view theme parks and their rides. wi
 ---
 ### Screenshots:
 ## ERD:
-## ![Component Hierarchy Diagrams](CHD.png)
+## ![Component Hierarchy Diagrams](chd.png)
 ---
 ### **Website Link:**
 ##### Live Link: [ThemeParks](https://themeparksga.surge.sh/)
