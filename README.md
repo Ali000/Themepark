@@ -15,7 +15,7 @@ Theme Parks is a website where the user can view theme parks and their rides. wi
 ### Screenshots:
 
 ## Website:
-## Home Page ![Home Page](HomePageWeb.png)
+## Home Page ![Home Page](HomePage.png)
 
 
 ### Technologies used
