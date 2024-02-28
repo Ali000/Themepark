@@ -105,9 +105,12 @@ const NewRide = (props) => {
           </label>
           <span className="input-highlight"></span>
         </div>
-        <button className="buttonThree" type="submit" >
-          <p className="textThree"> Add ride</p>
-        </button>
+        <div className="add-ride-btn">
+          <button className="buttonThree" type="submit" >
+            <p className="textThree"> Add ride</p>
+          </button>
+        </div>
+
       </form>
     </div>
   )
