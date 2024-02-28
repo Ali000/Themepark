@@ -353,3 +353,14 @@ textarea.input-fieldDec:focus + .input-labelDec {
   text-decoration: none;
   color: inherit;
 }
+.addingRideDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  height: 100vh; /* Set the height to 100% of the viewport height */
+  
+}
+.buttonsAddRide{
+  margin:  0 auto;
+}

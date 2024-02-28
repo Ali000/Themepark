@@ -1,17 +1,15 @@
-import { useRef } from 'react'
-import axios from 'axios';
+import { useRef } from "react"
+import axios from "axios"
 
 const NewRide = (props) => {
-
-  const nameRef = useRef(null);
-  const imageRef = useRef(null);
-  const thrillRef = useRef(null);
-  const descriptionRef = useRef(null);
-  const ageRef = useRef(null);
-
+  const nameRef = useRef(null)
+  const imageRef = useRef(null)
+  const thrillRef = useRef(null)
+  const descriptionRef = useRef(null)
+  const ageRef = useRef(null)
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
     let formFields = {
       name: nameRef.current.value,
@@ -19,39 +17,100 @@ const NewRide = (props) => {
       thrill: thrillRef.current.value,
       ageLimit: ageRef.current.value,
       description: descriptionRef.current.value,
-      themeParkId: props.id
+      themeParkId: props.id,
     }
 
-    let response = await axios.post("http://localhost:3000/rides", formFields);
+    let response = await axios.post("http://localhost:3000/rides", formFields)
     props.setRides([...props.rides, formFields])
-    e.target.reset();
-
+    e.target.reset()
   }
 
   return (
-    <div>
+    <div className="addingRideDiv buttonsAddRide">
+      <h1>Add Ride</h1>
       <form onSubmit={handleSubmit}>
-      <label htmlFor="rideName">Name: </label>
-      <input ref={nameRef} type="text" id="rideName"/>
-      <label htmlFor="rideImage">Image</label>
-      <input ref={imageRef} type="text" id="rideImage"/>
-      <label htmlFor="ageLimit">Age Limit</label>
-      <input ref={ageRef} type="number" id="ageLimit"/>
-      <label htmlFor="rideDesc">Description</label>
-      <textarea ref={descriptionRef} id="rideDesc" cols="30" rows="10"></textarea>
-      <label htmlFor="thrillLevel">Thrill Level</label>
-      <select ref={thrillRef} name="" id="thrilLevel">
-        <option value="Calm">Calm</option>
-        <option value="Low">Low</option>
-        <option value="Medium">Medium</option>
-        <option value="High">High</option>
-        <option value="Extreme">Extreme</option>
-      </select>
-      <button type="submit">Add ride</button>
-    </form>
+        <div className="input-container">
+          <input
+            ref={nameRef}
+            type="text"
+            id="rideName"
+            placeholder="Name"
+            className="input-field"
+          />
+          <label htmlFor="rideName" className="input-label">
+            Name
+          </label>
+          <span className="input-highlight"></span>
+        </div>
+
+        <div className="input-container">
+          <input
+            ref={imageRef}
+            type="text"
+            id="rideImage"
+            placeholder="Image"
+            className="input-field"
+          />
+          <label htmlFor="rideImage" className="input-label">
+            Image
+          </label>
+          <span className="input-highlight"></span>
+        </div>
+
+        <div className="input-container">
+          <input
+            ref={ageRef}
+            type="number"
+            id="ageLimit"
+            placeholder="Age Limit"
+            className="input-field"
+          />
+          <label htmlFor="ageLimit" className="input-label">
+            Age Limit
+          </label>
+          <span className="input-highlight"></span>
+        </div>
+
+        <div className="input-container">
+          <textarea
+            ref={descriptionRef}
+            id="rideDesc"
+            cols="5"
+            rows="5"
+            placeholder="Description"
+            className="input-field"
+          />
+          <label htmlFor="rideDesc" className="input-label">
+            Description
+          </label>
+          <span className="input-highlight"></span>
+        </div>
+
+        <div className="input-container">
+          <select
+            ref={thrillRef}
+            name=""
+            id="thrilLevel"
+            className="input-field"
+          >
+            <option value="Calm">Calm</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+            <option value="Extreme">Extreme</option>
+          </select>
+
+          <label htmlFor="thrillLevel" className="input-label">
+            Thrill Level
+          </label>
+          <span className="input-highlight"></span>
+        </div>
+        <button className="buttonThree" type="submit" >
+          <p className="textThree"> Add ride</p>
+        </button>
+      </form>
     </div>
   )
-
 }
 
 export default NewRide
