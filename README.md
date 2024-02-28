@@ -1,8 +1,52 @@
-# React + Vite
+# Themepark-Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Date : 2/28/2024
 
-Currently, two official plugins are available:
+### Made By:  
+##  Fatima Fouad - Ali Albanna - AAmir Saleh
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### **_Description_**
+Theme Parks is a website where the user can view theme parks and their rides. with the option of deleting and updating rides and them parks.
+
+---
+### **Website Link:**
+##### Live Link: [ThemeParks]()
+---
+### Screenshots:
+
+## Website:
+## Home Page ![Home Page](HomePageWeb.png)
+
+
+### Technologies used
+
+- [x] VSCode (Editor for Writing the Code)
+- [x] HTML (Structure of the pages)
+- [x] CSS (Style of the pages)
+- [x] React JS (Frontend)
+- [x] JavaScript (Functionality for the pages)
+---
+### What we have learned:
+
+- [x] CSS.
+- [x] React.
+- [x] Connecting NodeJS with React JS..
+---
+### What we are most proud of is :
+## Filtiring through the search:
+```
+.filter(
+            (park) =>
+              park.name.toLowerCase().includes(searchTerm) ||
+              park.description.toLowerCase().includes(searchTerm)
+          ) .....
+```
+
+---
+### Future plans:
+
+- [ ] Improve the design.
+- [ ] Add more functionalities.
+
+
+
