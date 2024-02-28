@@ -20,7 +20,7 @@ const NewRide = (props) => {
       themeParkId: props.id,
     }
 
-    let response = await axios.post("http://localhost:3000/rides", formFields)
+    let response = await axios.post("https://themepark.fly.dev/rides", formFields)
     props.setRides([...props.rides, formFields])
     e.target.reset()
   }

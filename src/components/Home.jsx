@@ -8,12 +8,12 @@ const Home = () => {
   const [searchTerm, setSearchTerm] = useState("")
 
   const getParks = async () => {
-    let response = await axios.get("http://localhost:3000/themeParks")
+    let response = await axios.get("https://themepark.fly.dev/themeParks")
     setParks(response.data)
   }
 
   const deleteThemePark = async (id) => {
-    await axios.delete(`http://localhost:3000/themeParks/${id}`)
+    await axios.delete(`https://themepark.fly.dev/themeParks/${id}`)
     getParks()
   }
 

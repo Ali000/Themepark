@@ -19,7 +19,7 @@ const NewPark = () => {
     }
 
     let response = await axios.post(
-      "http://localhost:3000/themeParks",
+      "https://themepark.fly.dev/themeParks",
       formFields
     )
     e.target.reset()
