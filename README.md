@@ -9,7 +9,7 @@
 Theme Parks is a website where the user can view theme parks and their rides. with the option of deleting and updating rides and them parks.
 
 ---
-### **Website Link:_**
+### **Website Link:**
 ##### Live Link: [ThemeParks]()
 ---
 ### Screenshots:
@@ -39,7 +39,7 @@ Theme Parks is a website where the user can view theme parks and their rides. wi
             (park) =>
               park.name.toLowerCase().includes(searchTerm) ||
               park.description.toLowerCase().includes(searchTerm)
-          )
+          ) .....
 ```
 
 ---
