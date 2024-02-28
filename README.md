@@ -49,8 +49,4 @@ Theme Parks is a website where the user can view theme parks and their rides. wi
 - [ ] Add more functionalities.
 
 
----
-### **_Credits_**
-
-##### Drawio: [Draw](https://app.diagrams.net/)
 
