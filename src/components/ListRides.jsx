@@ -6,10 +6,14 @@ const ListRides = (props) => {
         <div key={ride._id} className="wrapper-ride">
           <div className="ride-card">
             <img src={ride.image} alt={ride.name} />
-            <h3>{ride.name}</h3> 
-            <h3>{ride.ageLimit}</h3>
-            <h3>{ride.thrill}</h3>
-            <h3>{ride.description}</h3>
+            <div className="ride-info">
+              <h2>{ride.name}</h2> 
+              <h3>Age Limit: {ride.ageLimit}</h3>
+              <h3>Thrill: {ride.thrill}</h3>
+            </div>
+            <div className="ride-desc">
+              <h3>{ride.description}</h3>
+            </div>
           </div>
         </div>
       )
