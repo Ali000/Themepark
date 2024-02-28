@@ -27,6 +27,16 @@ const ThemePark = () => {
     return (
         <div>
             <Nav />
+            <div className="themepark-page">
+                <div className="themepark-info">
+                    <h1>{themePark.name}</h1>
+                    <h2>{themePark.location}</h2> <br /><br />
+                    <h4>{themePark.description}</h4>
+                </div>
+                <div>
+                    <img src={themePark.image} alt={themePark.name} />
+                </div>
+            </div>
             <ListRides setRides={setRides} rides={rides} />
             <NewRide id={id} setRides={setRides} rides={rides} />
         </div>
