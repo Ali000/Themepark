@@ -17,7 +17,6 @@ const ThemePark = () => {
         let response = await axios.get("http://localhost:3000/themeParks/"+ id);
         setThemePark(response.data);
         setRides(response.data.ridesIds);
-        console.log(response.data)
     }
 
     useEffect(() => {

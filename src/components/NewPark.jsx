@@ -28,6 +28,7 @@ const NewPark = () => {
   return (
     <div>
       <Nav />
+      <h1 className="new-themepark-title">Add New Themepark</h1>
       <div className="inputsDiv">
         <div className="input-container">
           <input
