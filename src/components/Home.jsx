@@ -58,14 +58,15 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="themepark-delete">
-                  <button
+
+                </div>
+                <div className="themepark-view-more">
+                <button
                     className="buttonTwo"
                     onClick={() => deleteThemePark(park._id)}
                   >
                     <p className="textTwo">Delete</p>
                   </button>
-                </div>
-                <div className="themepark-view-more">
                   <Link
                     to={"/themepark/" + park._id}
                     state={{ id: park._id }}
