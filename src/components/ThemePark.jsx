@@ -1,24 +1,23 @@
 import Nav from "./Nav"
 import NewRide from "./NewRide"
+import ListRides from "./ListRides"
 import { useLocation } from "react-router-dom"
 import { useState, useEffect } from "react"
 import axios from "axios"
 
 const ThemePark = () => {
 
+    const [themePark, setThemePark] = useState({});
     const [rides, setRides] = useState([]);
 
     const location = useLocation();
     const {id} = location.state;
 
-    const getAllRides = async () => {
-        let mongoId;
-        let response = await axios.get("http://localhost:3000/rides");
-        let ridesPerPark = response.data.filter((ride)=> {
-            mongoId = ride.themeParkId;
-            return mongoId === id;
-        })
-        setRides(ridesPerPark);
+    const getAllRides = async () => { //get themepark details, but will not change it
+        let response = await axios.get("http://localhost:3000/themeParks/"+ id);
+        setThemePark(response.data);
+        setRides(response.data.ridesIds);
+        console.log(response.data)
     }
 
     useEffect(() => {
@@ -28,28 +27,8 @@ const ThemePark = () => {
     return (
         <div>
             <Nav />
-            {
-                rides.map((ride) => {
-                    return (
-                        <div key={ride._id} className="wrapper-ride">
-                            <div  className="ride-card">
-                                <div>
-                                    <img src={ride.image} alt={ride.name} />
-                                </div>
-                                <div>
-                                <h3>{ride.name}</h3>
-                                </div>
-                                <div>
-                                <h3>{ride.ageLimit}</h3>
-                                </div>
-                                <h3>{ride.thrill}</h3>
-                                <p>{ride.description}</p>
-                            </div>
-                        </div>
-                    )
-                })
-            }
-            <NewRide id={id}/>
+            <ListRides setRides={setRides} rides={rides} />
+            <NewRide id={id} setRides={setRides} rides={rides} />
         </div>
     )
 }

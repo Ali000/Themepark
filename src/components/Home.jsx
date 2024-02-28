@@ -59,10 +59,10 @@ const Home = () => {
                 </div>
                 <div className="themepark-delete">
                   <button
-                    class="buttonTwo"
+                    className="buttonTwo"
                     onClick={() => deleteThemePark(park._id)}
                   >
-                    <p class="textTwo">Delete</p>
+                    <p className="textTwo">Delete</p>
                   </button>
                 </div>
                 <div className="themepark-view-more">
@@ -71,8 +71,8 @@ const Home = () => {
                     state={{ id: park._id }}
                     className="link-button"
                   >
-                    <button class="buttonOne">
-                      <p class="textOne">View More</p>
+                    <button className="buttonOne">
+                      <p className="textOne">View More</p>
                     </button>
                   </Link>
                 </div>
