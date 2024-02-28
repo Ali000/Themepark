@@ -14,7 +14,7 @@ const ThemePark = () => {
     const {id} = location.state;
 
     const getAllRides = async () => { //get themepark details, but will not change it
-        let response = await axios.get("http://localhost:3000/themeParks/"+ id);
+        let response = await axios.get("https://themepark.fly.dev/themeParks/"+ id);
         setThemePark(response.data);
         setRides(response.data.ridesIds);
     }
