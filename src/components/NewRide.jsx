@@ -23,7 +23,7 @@ const NewRide = (props) => {
     }
 
     let response = await axios.post("http://localhost:3000/rides", formFields);
-
+    props.setRides([...props.rides, formFields])
     e.target.reset();
 
   }

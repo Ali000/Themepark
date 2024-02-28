@@ -103,6 +103,7 @@ input:focus {
 input:hover {
   outline: 1px solid lightgrey;
 }
+
 .wrapper-ride {
   display: flex;
   justify-content: center;
