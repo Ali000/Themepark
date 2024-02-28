@@ -10,7 +10,7 @@ Theme Parks is a website where the user can view theme parks and their rides. wi
 
 ---
 ### **Website Link:**
-##### Live Link: [ThemeParks]()
+##### Live Link: [ThemeParks](https://themeparksga.surge.sh/)
 ---
 
 ### Technologies used
